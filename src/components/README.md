@@ -1,35 +1,40 @@
-# Components
+# Default Vuetify Theme Color Key
 
-Vue template files in this folder are automatically imported.
-
-## 🚀 Usage
-
-Importing is handled by [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components). This plugin automatically imports `.vue` files created in the `src/components` directory, and registers them as global components. This means that you can use any component in your application without having to manually import it.
-
-The following example assumes a component located at `src/components/MyComponent.vue`:
-
-```vue
-<template>
-  <div>
-    <MyComponent />
-  </div>
-</template>
-
-<script lang="ts" setup>
-  //
-</script>
-```
-
-When your template is rendered, the component's import will automatically be inlined, which renders to this:
-
-```vue
-<template>
-  <div>
-    <MyComponent />
-  </div>
-</template>
-
-<script lang="ts" setup>
-  import MyComponent from '@/components/MyComponent.vue'
-</script>
-```
+light: {
+dark: false,
+colors: {
+background: '#FFFFFF',
+surface: '#FFFFFF',
+'surface-bright': '#FFFFFF',
+'surface-light': '#EEEEEE',
+'surface-variant': '#424242',
+'on-surface-variant': '#EEEEEE',
+primary: '#1867C0',
+'primary-darken-1': '#1F5592',
+secondary: '#48A9A6',
+'secondary-darken-1': '#018786',
+error: '#B00020',
+info: '#2196F3',
+success: '#4CAF50',
+warning: '#FB8C00',
+},
+},
+dark: {
+dark: true,
+colors: {
+background: '#121212',
+surface: '#212121',
+'surface-bright': '#ccbfd6',
+'surface-light': '#424242',
+'surface-variant': '#a3a3a3',
+'on-surface-variant': '#424242',
+primary: '#2196F3',
+'primary-darken-1': '#277CC1',
+secondary: '#54B6B2',
+'secondary-darken-1': '#48A9A6',
+error: '#CF6679',
+info: '#2196F3',
+success: '#4CAF50',
+warning: '#FB8C00',
+},
+},

@@ -16,11 +16,11 @@
 
         <v-btn variant="outlined"> Export </v-btn>
 
-        <v-btn icon>
+        <v-btn icon @click="toggleTheme">
           <v-icon>mdi-theme-light-dark</v-icon>
         </v-btn>
       </v-app-bar>
-      <v-navigation-drawer>
+      <v-navigation-drawer floating permanent>
         <NavigationDrawerList></NavigationDrawerList>
       </v-navigation-drawer>
 
@@ -36,4 +36,10 @@
 
 <script setup lang="ts">
 //
+import { useTheme } from "vuetify";
+const theme = useTheme();
+
+function toggleTheme() {
+  theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+}
 </script>
