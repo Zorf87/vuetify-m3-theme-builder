@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     NavigationDrawerList: typeof import('./src/components/NavigationDrawerList.vue')['default']
   }
 }
