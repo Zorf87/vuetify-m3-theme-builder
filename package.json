@@ -7,7 +7,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@material/material-color-utilities": "^0.2.7",
     "@mdi/font": "6.2.95",
+    "just-kebab-case": "^4.2.0",
     "roboto-fontface": "*",
     "vue": "^3.4.21",
     "vuetify": "^3.5.8"

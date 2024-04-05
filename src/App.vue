@@ -14,7 +14,7 @@
         </v-app-bar-title>
         <v-spacer></v-spacer>
 
-        <v-btn variant="outlined"> Export </v-btn>
+        <v-btn variant="outlined" @click="exportTheme"> Export </v-btn>
 
         <v-btn icon @click="toggleTheme">
           <v-icon>mdi-theme-light-dark</v-icon>
@@ -24,11 +24,11 @@
         <NavigationDrawerList></NavigationDrawerList>
       </v-navigation-drawer>
 
-      <v-main
-        class="d-flex align-center justify-center"
-        style="min-height: 300px"
-      >
-        <HelloWorld />
+      <v-main class="" style="min-height: 300px">
+        <ColorSchema></ColorSchema>
+        <Buttons></Buttons>
+        <!-- <HelloWorld /> -->
+        <!-- <ImageExample></ImageExample> -->
       </v-main>
     </v-layout>
   </v-app>
@@ -37,9 +37,21 @@
 <script setup lang="ts">
 //
 import { useTheme } from "vuetify";
+import ImageExample from "./components/ImageExample.vue";
+import Buttons from "./components/Buttons.vue";
 const theme = useTheme();
 
 function toggleTheme() {
   theme.global.name.value = theme.global.current.value.dark ? "light" : "dark";
+}
+
+function exportTheme() {
+  const data = JSON.stringify(theme.themes.value);
+  const blob = new Blob([data], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.download = "test.json";
+  a.href = window.URL.createObjectURL(blob);
+  a.dataset.downloadurl = ["text/json", a.download, a.href].join(":");
+  a.click();
 }
 </script>

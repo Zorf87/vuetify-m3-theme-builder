@@ -1,19 +1,26 @@
 <template>
-  <v-list class="d-flex flex-column pa-4 ga-4">
-    <v-list-item
-      v-for="(b, i) in buttons"
-      :key="i"
-      class="bg-surface-light"
-      rounded="xl"
-    >
-      <template v-slot:prepend>
-        <v-btn @click="handleClickBtnColor(b.color)" :color="b.color" icon>
-          <v-icon :color="b.color">mdi-circle</v-icon>
-        </v-btn>
-      </template>
-      <v-list-item-title class="pl-4">{{ b.title }}</v-list-item-title>
-    </v-list-item>
-  </v-list>
+  <v-theme-provider theme="light">
+    <v-list class="d-flex flex-column pa-4 ga-4">
+      <v-list-item
+        v-for="(b, i) in buttons"
+        :key="i"
+        class="bg-surface-light"
+        rounded="xl"
+      >
+        <template v-slot:prepend>
+          <v-btn
+            @click="handleClickBtnColor(b)"
+            :color="b.key"
+            icon
+            :disabled="i > 0"
+          >
+            <v-icon :color="b.key">mdi-circle</v-icon>
+          </v-btn>
+        </template>
+        <v-list-item-title class="pl-4">{{ b.title }}</v-list-item-title>
+      </v-list-item>
+    </v-list>
+  </v-theme-provider>
   <v-dialog v-model="showColorPickerDialog" :width="300">
     <v-card rounded="xl">
       <v-card-title>Color Picker</v-card-title>
@@ -24,7 +31,7 @@
         <v-btn variant="outlined" @click="showColorPickerDialog = false"
           >Close</v-btn
         >
-        <v-btn @click="applySelection">Close</v-btn>
+        <v-btn variant="flat" @click="applySelection">Apply</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
@@ -33,39 +40,49 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useTheme } from "vuetify";
+import { vuetifyThemeFromHex } from "../plugins/vuetifyM3ThemeGenerator";
+
 const theme = useTheme();
 
 const buttons = ref([
   {
-    color: "primary",
+    key: "primary",
     title: "Primary",
   },
   {
-    color: "secondary",
+    key: "secondary",
     title: "Secondary",
   },
   {
-    color: "tertiary",
+    key: "tertiary",
     title: "Tertiary",
   },
 ]);
 
 const colorPicker = ref("#ff00ff");
 const showColorPickerDialog = ref(false);
-const generateAll = ref(false);
+const colorSelected = ref();
 
-function handleClickBtnColor(preselectionColor: string) {
-  if (preselectionColor == "primary") {
-    this.generateAll.value = true;
-  }
+function handleClickBtnColor(b: any) {
+  colorSelected.value = b;
 
-  this.colorPicker = theme.current.value.colors[preselectionColor];
+  colorPicker.value = theme.themes.value.light.colors[b.key];
   showColorPickerDialog.value = true;
 }
 
 function applySelection() {
-  if (generateAll) {
+  if (colorSelected.value.key == "primary") {
+    // Genero l'interno schema
+    const lightTheme = vuetifyThemeFromHex(colorPicker.value, false);
+    const darkTheme = vuetifyThemeFromHex(colorPicker.value, true);
+
+    console.log("lightTheme: ", lightTheme);
+    console.log("darkTheme: ", darkTheme);
+
+    theme.themes.value.dark.colors = darkTheme.colors;
+    theme.themes.value.light.colors = lightTheme.colors;
   } else {
+    // Genero solo la paletta secondary / tertiary
   }
 }
 </script>

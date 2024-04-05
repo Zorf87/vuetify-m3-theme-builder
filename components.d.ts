@@ -7,7 +7,12 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Buttons: typeof import('./src/components/Buttons.vue')['default']
+    ColorSchema: typeof import('./src/components/ColorSchema.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    ImageExample: typeof import('./src/components/ImageExample.vue')['default']
     NavigationDrawerList: typeof import('./src/components/NavigationDrawerList.vue')['default']
+    Overview: typeof import('./src/components/Overview.vue')['default']
+    Section: typeof import('./src/components/Section.vue')['default']
   }
 }
