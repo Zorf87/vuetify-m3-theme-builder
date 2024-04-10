@@ -1,0 +1,1078 @@
+:root {
+  --v-theme-primary-palette-key-color: 126, 110, 169;
+  --v-theme-primary-palette-key-color-overlay-multiplier: 1;
+  --v-theme-secondary-palette-key-color: 123, 116, 138;
+  --v-theme-secondary-palette-key-color-overlay-multiplier: 1;
+  --v-theme-tertiary-palette-key-color: 153, 106, 121;
+  --v-theme-tertiary-palette-key-color-overlay-multiplier: 1;
+  --v-theme-neutral-palette-key-color: 122, 118, 125;
+  --v-theme-neutral-palette-key-color-overlay-multiplier: 1;
+  --v-theme-neutral-variant-palette-key-color: 122, 117, 127;
+  --v-theme-neutral-variant-palette-key-color-overlay-multiplier: 1;
+  --v-theme-background: 253, 247, 255;
+  --v-theme-background-overlay-multiplier: 1;
+  --v-theme-on-background: 29, 27, 32;
+  --v-theme-surface: 253, 247, 255;
+  --v-theme-surface-overlay-multiplier: 1;
+  --v-theme-surface-dim: 222, 216, 224;
+  --v-theme-surface-dim-overlay-multiplier: 1;
+  --v-theme-surface-bright: 253, 247, 255;
+  --v-theme-surface-bright-overlay-multiplier: 1;
+  --v-theme-surface-container-lowest: 255, 255, 255;
+  --v-theme-surface-container-lowest-overlay-multiplier: 1;
+  --v-theme-surface-container-low: 248, 242, 250;
+  --v-theme-surface-container-low-overlay-multiplier: 1;
+  --v-theme-surface-container: 242, 236, 244;
+  --v-theme-surface-container-overlay-multiplier: 1;
+  --v-theme-surface-container-high: 236, 230, 238;
+  --v-theme-surface-container-high-overlay-multiplier: 1;
+  --v-theme-surface-container-highest: 230, 224, 233;
+  --v-theme-surface-container-highest-overlay-multiplier: 1;
+  --v-theme-on-surface: 29, 27, 32;
+  --v-theme-surface-variant: 231, 224, 235;
+  --v-theme-surface-variant-overlay-multiplier: 1;
+  --v-theme-on-surface-variant: 73, 69, 78;
+  --v-theme-inverse-surface: 50, 47, 53;
+  --v-theme-inverse-surface-overlay-multiplier: 2;
+  --v-theme-inverse-on-surface: 245, 239, 247;
+  --v-theme-inverse-on-surface-overlay-multiplier: 1;
+  --v-theme-outline: 107, 103, 112;
+  --v-theme-outline-overlay-multiplier: 2;
+  --v-theme-outline-variant: 149, 144, 154;
+  --v-theme-outline-variant-overlay-multiplier: 1;
+  --v-theme-shadow: 0, 0, 0;
+  --v-theme-shadow-overlay-multiplier: 2;
+  --v-theme-scrim: 0, 0, 0;
+  --v-theme-scrim-overlay-multiplier: 2;
+  --v-theme-surface-tint: 101, 85, 143;
+  --v-theme-surface-tint-overlay-multiplier: 2;
+  --v-theme-primary: 83, 67, 124;
+  --v-theme-primary-overlay-multiplier: 2;
+  --v-theme-on-primary: 255, 255, 255;
+  --v-theme-primary-container: 153, 136, 198;
+  --v-theme-primary-container-overlay-multiplier: 1;
+  --v-theme-on-primary-container: 0, 0, 0;
+  --v-theme-inverse-primary: 207, 189, 254;
+  --v-theme-inverse-primary-overlay-multiplier: 1;
+  --v-theme-secondary: 80, 73, 94;
+  --v-theme-secondary-overlay-multiplier: 2;
+  --v-theme-on-secondary: 255, 255, 255;
+  --v-theme-secondary-container: 150, 142, 166;
+  --v-theme-secondary-container-overlay-multiplier: 1;
+  --v-theme-on-secondary-container: 0, 0, 0;
+  --v-theme-tertiary: 106, 64, 78;
+  --v-theme-tertiary-overlay-multiplier: 2;
+  --v-theme-on-tertiary: 255, 255, 255;
+  --v-theme-tertiary-container: 182, 132, 147;
+  --v-theme-tertiary-container-overlay-multiplier: 1;
+  --v-theme-on-tertiary-container: 0, 0, 0;
+  --v-theme-error: 158, 0, 11;
+  --v-theme-error-overlay-multiplier: 2;
+  --v-theme-on-error: 255, 255, 255;
+  --v-theme-error-container: 255, 87, 76;
+  --v-theme-error-container-overlay-multiplier: 1;
+  --v-theme-on-error-container: 0, 0, 0;
+  --v-theme-primary-fixed: 123, 107, 167;
+  --v-theme-primary-fixed-overlay-multiplier: 2;
+  --v-theme-primary-fixed-dim: 98, 83, 140;
+  --v-theme-primary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-primary-fixed: 255, 255, 255;
+  --v-theme-on-primary-fixed-variant: 255, 255, 255;
+  --v-theme-secondary-fixed: 120, 113, 135;
+  --v-theme-secondary-fixed-overlay-multiplier: 2;
+  --v-theme-secondary-fixed-dim: 95, 89, 110;
+  --v-theme-secondary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-secondary-fixed: 255, 255, 255;
+  --v-theme-on-secondary-fixed-variant: 255, 255, 255;
+  --v-theme-tertiary-fixed: 150, 103, 118;
+  --v-theme-tertiary-fixed-overlay-multiplier: 2;
+  --v-theme-tertiary-fixed-dim: 123, 79, 94;
+  --v-theme-tertiary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-tertiary-fixed: 255, 255, 255;
+  --v-theme-on-tertiary-fixed-variant: 255, 255, 255;
+  --v-theme-on-primary-palette-key-color: 255, 255, 255;
+  --v-theme-on-secondary-palette-key-color: 255, 255, 255;
+  --v-theme-on-tertiary-palette-key-color: 255, 255, 255;
+  --v-theme-on-neutral-palette-key-color: 255, 255, 255;
+  --v-theme-on-neutral-variant-palette-key-color: 255, 255, 255;
+  --v-theme-on-surface-dim: 0, 0, 0;
+  --v-theme-on-surface-bright: 0, 0, 0;
+  --v-theme-on-surface-container-lowest: 0, 0, 0;
+  --v-theme-on-surface-container-low: 0, 0, 0;
+  --v-theme-on-surface-container: 0, 0, 0;
+  --v-theme-on-surface-container-high: 0, 0, 0;
+  --v-theme-on-surface-container-highest: 0, 0, 0;
+  --v-theme-on-inverse-surface: 255, 255, 255;
+  --v-theme-on-inverse-on-surface: 0, 0, 0;
+  --v-theme-on-outline: 255, 255, 255;
+  --v-theme-on-outline-variant: 255, 255, 255;
+  --v-theme-on-shadow: 255, 255, 255;
+  --v-theme-on-scrim: 255, 255, 255;
+  --v-theme-on-surface-tint: 255, 255, 255;
+  --v-theme-on-inverse-primary: 0, 0, 0;
+  --v-theme-on-primary-fixed-dim: 255, 255, 255;
+  --v-theme-on-secondary-fixed-dim: 255, 255, 255;
+  --v-theme-on-tertiary-fixed-dim: 255, 255, 255;
+  --v-border-color: 0, 0, 0;
+  --v-border-opacity: 0.12;
+  --v-high-emphasis-opacity: 0.87;
+  --v-medium-emphasis-opacity: 0.6;
+  --v-disabled-opacity: 0.38;
+  --v-idle-opacity: 0.04;
+  --v-hover-opacity: 0.04;
+  --v-focus-opacity: 0.12;
+  --v-selected-opacity: 0.08;
+  --v-activated-opacity: 0.12;
+  --v-pressed-opacity: 0.12;
+  --v-dragged-opacity: 0.08;
+  --v-theme-kbd: 33, 37, 41;
+  --v-theme-on-kbd: 255, 255, 255;
+  --v-theme-code: 245, 245, 245;
+  --v-theme-on-code: 0, 0, 0;
+}
+
+.v-theme--light {
+  color-scheme: normal;
+  --v-theme-primary-palette-key-color: 126, 110, 169;
+  --v-theme-primary-palette-key-color-overlay-multiplier: 1;
+  --v-theme-secondary-palette-key-color: 123, 116, 138;
+  --v-theme-secondary-palette-key-color-overlay-multiplier: 1;
+  --v-theme-tertiary-palette-key-color: 153, 106, 121;
+  --v-theme-tertiary-palette-key-color-overlay-multiplier: 1;
+  --v-theme-neutral-palette-key-color: 122, 118, 125;
+  --v-theme-neutral-palette-key-color-overlay-multiplier: 1;
+  --v-theme-neutral-variant-palette-key-color: 122, 117, 127;
+  --v-theme-neutral-variant-palette-key-color-overlay-multiplier: 1;
+  --v-theme-background: 253, 247, 255;
+  --v-theme-background-overlay-multiplier: 1;
+  --v-theme-on-background: 29, 27, 32;
+  --v-theme-surface: 253, 247, 255;
+  --v-theme-surface-overlay-multiplier: 1;
+  --v-theme-surface-dim: 222, 216, 224;
+  --v-theme-surface-dim-overlay-multiplier: 1;
+  --v-theme-surface-bright: 253, 247, 255;
+  --v-theme-surface-bright-overlay-multiplier: 1;
+  --v-theme-surface-container-lowest: 255, 255, 255;
+  --v-theme-surface-container-lowest-overlay-multiplier: 1;
+  --v-theme-surface-container-low: 248, 242, 250;
+  --v-theme-surface-container-low-overlay-multiplier: 1;
+  --v-theme-surface-container: 242, 236, 244;
+  --v-theme-surface-container-overlay-multiplier: 1;
+  --v-theme-surface-container-high: 236, 230, 238;
+  --v-theme-surface-container-high-overlay-multiplier: 1;
+  --v-theme-surface-container-highest: 230, 224, 233;
+  --v-theme-surface-container-highest-overlay-multiplier: 1;
+  --v-theme-on-surface: 29, 27, 32;
+  --v-theme-surface-variant: 231, 224, 235;
+  --v-theme-surface-variant-overlay-multiplier: 1;
+  --v-theme-on-surface-variant: 73, 69, 78;
+  --v-theme-inverse-surface: 50, 47, 53;
+  --v-theme-inverse-surface-overlay-multiplier: 2;
+  --v-theme-inverse-on-surface: 245, 239, 247;
+  --v-theme-inverse-on-surface-overlay-multiplier: 1;
+  --v-theme-outline: 107, 103, 112;
+  --v-theme-outline-overlay-multiplier: 2;
+  --v-theme-outline-variant: 149, 144, 154;
+  --v-theme-outline-variant-overlay-multiplier: 1;
+  --v-theme-shadow: 0, 0, 0;
+  --v-theme-shadow-overlay-multiplier: 2;
+  --v-theme-scrim: 0, 0, 0;
+  --v-theme-scrim-overlay-multiplier: 2;
+  --v-theme-surface-tint: 101, 85, 143;
+  --v-theme-surface-tint-overlay-multiplier: 2;
+  --v-theme-primary: 83, 67, 124;
+  --v-theme-primary-overlay-multiplier: 2;
+  --v-theme-on-primary: 255, 255, 255;
+  --v-theme-primary-container: 153, 136, 198;
+  --v-theme-primary-container-overlay-multiplier: 1;
+  --v-theme-on-primary-container: 0, 0, 0;
+  --v-theme-inverse-primary: 207, 189, 254;
+  --v-theme-inverse-primary-overlay-multiplier: 1;
+  --v-theme-secondary: 80, 73, 94;
+  --v-theme-secondary-overlay-multiplier: 2;
+  --v-theme-on-secondary: 255, 255, 255;
+  --v-theme-secondary-container: 150, 142, 166;
+  --v-theme-secondary-container-overlay-multiplier: 1;
+  --v-theme-on-secondary-container: 0, 0, 0;
+  --v-theme-tertiary: 106, 64, 78;
+  --v-theme-tertiary-overlay-multiplier: 2;
+  --v-theme-on-tertiary: 255, 255, 255;
+  --v-theme-tertiary-container: 182, 132, 147;
+  --v-theme-tertiary-container-overlay-multiplier: 1;
+  --v-theme-on-tertiary-container: 0, 0, 0;
+  --v-theme-error: 158, 0, 11;
+  --v-theme-error-overlay-multiplier: 2;
+  --v-theme-on-error: 255, 255, 255;
+  --v-theme-error-container: 255, 87, 76;
+  --v-theme-error-container-overlay-multiplier: 1;
+  --v-theme-on-error-container: 0, 0, 0;
+  --v-theme-primary-fixed: 123, 107, 167;
+  --v-theme-primary-fixed-overlay-multiplier: 2;
+  --v-theme-primary-fixed-dim: 98, 83, 140;
+  --v-theme-primary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-primary-fixed: 255, 255, 255;
+  --v-theme-on-primary-fixed-variant: 255, 255, 255;
+  --v-theme-secondary-fixed: 120, 113, 135;
+  --v-theme-secondary-fixed-overlay-multiplier: 2;
+  --v-theme-secondary-fixed-dim: 95, 89, 110;
+  --v-theme-secondary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-secondary-fixed: 255, 255, 255;
+  --v-theme-on-secondary-fixed-variant: 255, 255, 255;
+  --v-theme-tertiary-fixed: 150, 103, 118;
+  --v-theme-tertiary-fixed-overlay-multiplier: 2;
+  --v-theme-tertiary-fixed-dim: 123, 79, 94;
+  --v-theme-tertiary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-tertiary-fixed: 255, 255, 255;
+  --v-theme-on-tertiary-fixed-variant: 255, 255, 255;
+  --v-theme-on-primary-palette-key-color: 255, 255, 255;
+  --v-theme-on-secondary-palette-key-color: 255, 255, 255;
+  --v-theme-on-tertiary-palette-key-color: 255, 255, 255;
+  --v-theme-on-neutral-palette-key-color: 255, 255, 255;
+  --v-theme-on-neutral-variant-palette-key-color: 255, 255, 255;
+  --v-theme-on-surface-dim: 0, 0, 0;
+  --v-theme-on-surface-bright: 0, 0, 0;
+  --v-theme-on-surface-container-lowest: 0, 0, 0;
+  --v-theme-on-surface-container-low: 0, 0, 0;
+  --v-theme-on-surface-container: 0, 0, 0;
+  --v-theme-on-surface-container-high: 0, 0, 0;
+  --v-theme-on-surface-container-highest: 0, 0, 0;
+  --v-theme-on-inverse-surface: 255, 255, 255;
+  --v-theme-on-inverse-on-surface: 0, 0, 0;
+  --v-theme-on-outline: 255, 255, 255;
+  --v-theme-on-outline-variant: 255, 255, 255;
+  --v-theme-on-shadow: 255, 255, 255;
+  --v-theme-on-scrim: 255, 255, 255;
+  --v-theme-on-surface-tint: 255, 255, 255;
+  --v-theme-on-inverse-primary: 0, 0, 0;
+  --v-theme-on-primary-fixed-dim: 255, 255, 255;
+  --v-theme-on-secondary-fixed-dim: 255, 255, 255;
+  --v-theme-on-tertiary-fixed-dim: 255, 255, 255;
+  --v-border-color: 0, 0, 0;
+  --v-border-opacity: 0.12;
+  --v-high-emphasis-opacity: 0.87;
+  --v-medium-emphasis-opacity: 0.6;
+  --v-disabled-opacity: 0.38;
+  --v-idle-opacity: 0.04;
+  --v-hover-opacity: 0.04;
+  --v-focus-opacity: 0.12;
+  --v-selected-opacity: 0.08;
+  --v-activated-opacity: 0.12;
+  --v-pressed-opacity: 0.12;
+  --v-dragged-opacity: 0.08;
+  --v-theme-kbd: 33, 37, 41;
+  --v-theme-on-kbd: 255, 255, 255;
+  --v-theme-code: 245, 245, 245;
+  --v-theme-on-code: 0, 0, 0;
+}
+
+.v-theme--dark {
+  color-scheme: dark;
+  --v-theme-primary-palette-key-color: 126, 110, 169;
+  --v-theme-primary-palette-key-color-overlay-multiplier: 2;
+  --v-theme-secondary-palette-key-color: 123, 116, 138;
+  --v-theme-secondary-palette-key-color-overlay-multiplier: 2;
+  --v-theme-tertiary-palette-key-color: 153, 106, 121;
+  --v-theme-tertiary-palette-key-color-overlay-multiplier: 2;
+  --v-theme-neutral-palette-key-color: 122, 118, 125;
+  --v-theme-neutral-palette-key-color-overlay-multiplier: 2;
+  --v-theme-neutral-variant-palette-key-color: 122, 117, 127;
+  --v-theme-neutral-variant-palette-key-color-overlay-multiplier: 2;
+  --v-theme-background: 20, 18, 24;
+  --v-theme-background-overlay-multiplier: 1;
+  --v-theme-on-background: 230, 224, 233;
+  --v-theme-surface: 20, 18, 24;
+  --v-theme-surface-overlay-multiplier: 1;
+  --v-theme-surface-dim: 20, 18, 24;
+  --v-theme-surface-dim-overlay-multiplier: 1;
+  --v-theme-surface-bright: 59, 56, 62;
+  --v-theme-surface-bright-overlay-multiplier: 1;
+  --v-theme-surface-container-lowest: 15, 13, 19;
+  --v-theme-surface-container-lowest-overlay-multiplier: 1;
+  --v-theme-surface-container-low: 29, 27, 32;
+  --v-theme-surface-container-low-overlay-multiplier: 1;
+  --v-theme-surface-container: 33, 31, 36;
+  --v-theme-surface-container-overlay-multiplier: 1;
+  --v-theme-surface-container-high: 43, 41, 47;
+  --v-theme-surface-container-high-overlay-multiplier: 1;
+  --v-theme-surface-container-highest: 54, 52, 58;
+  --v-theme-surface-container-highest-overlay-multiplier: 1;
+  --v-theme-on-surface: 237, 231, 239;
+  --v-theme-surface-variant: 73, 69, 78;
+  --v-theme-surface-variant-overlay-multiplier: 1;
+  --v-theme-on-surface-variant: 202, 196, 207;
+  --v-theme-inverse-surface: 230, 224, 233;
+  --v-theme-inverse-surface-overlay-multiplier: 2;
+  --v-theme-inverse-on-surface: 50, 47, 53;
+  --v-theme-inverse-on-surface-overlay-multiplier: 1;
+  --v-theme-outline: 154, 149, 160;
+  --v-theme-outline-overlay-multiplier: 2;
+  --v-theme-outline-variant: 112, 107, 117;
+  --v-theme-outline-variant-overlay-multiplier: 1;
+  --v-theme-shadow: 0, 0, 0;
+  --v-theme-shadow-overlay-multiplier: 1;
+  --v-theme-scrim: 0, 0, 0;
+  --v-theme-scrim-overlay-multiplier: 1;
+  --v-theme-surface-tint: 207, 189, 254;
+  --v-theme-surface-tint-overlay-multiplier: 2;
+  --v-theme-primary: 207, 189, 254;
+  --v-theme-primary-overlay-multiplier: 2;
+  --v-theme-on-primary: 38, 22, 77;
+  --v-theme-primary-container: 116, 100, 159;
+  --v-theme-primary-container-overlay-multiplier: 1;
+  --v-theme-on-primary-container: 255, 255, 255;
+  --v-theme-inverse-primary: 88, 72, 129;
+  --v-theme-inverse-primary-overlay-multiplier: 1;
+  --v-theme-secondary: 203, 194, 219;
+  --v-theme-secondary-overlay-multiplier: 2;
+  --v-theme-on-secondary: 35, 30, 48;
+  --v-theme-secondary-container: 113, 106, 128;
+  --v-theme-secondary-container-overlay-multiplier: 1;
+  --v-theme-on-secondary-container: 255, 255, 255;
+  --v-theme-tertiary: 239, 184, 200;
+  --v-theme-tertiary-overlay-multiplier: 2;
+  --v-theme-on-tertiary: 55, 22, 34;
+  --v-theme-tertiary-container: 142, 96, 111;
+  --v-theme-tertiary-container-overlay-multiplier: 1;
+  --v-theme-on-tertiary-container: 255, 255, 255;
+  --v-theme-error: 255, 180, 171;
+  --v-theme-error-overlay-multiplier: 2;
+  --v-theme-on-error: 75, 0, 2;
+  --v-theme-error-container: 208, 44, 39;
+  --v-theme-error-container-overlay-multiplier: 1;
+  --v-theme-on-error-container: 255, 255, 255;
+  --v-theme-primary-fixed: 233, 221, 255;
+  --v-theme-primary-fixed-overlay-multiplier: 2;
+  --v-theme-primary-fixed-dim: 207, 189, 254;
+  --v-theme-primary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-primary-fixed: 32, 16, 71;
+  --v-theme-on-primary-fixed-variant: 70, 55, 110;
+  --v-theme-secondary-fixed: 232, 222, 248;
+  --v-theme-secondary-fixed-overlay-multiplier: 2;
+  --v-theme-secondary-fixed-dim: 203, 194, 219;
+  --v-theme-secondary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-secondary-fixed: 30, 25, 43;
+  --v-theme-on-secondary-fixed-variant: 67, 61, 81;
+  --v-theme-tertiary-fixed: 255, 217, 227;
+  --v-theme-tertiary-fixed-overlay-multiplier: 2;
+  --v-theme-tertiary-fixed-dim: 239, 184, 200;
+  --v-theme-tertiary-fixed-dim-overlay-multiplier: 2;
+  --v-theme-on-tertiary-fixed: 49, 16, 29;
+  --v-theme-on-tertiary-fixed-variant: 92, 52, 66;
+  --v-theme-on-primary-palette-key-color: 255, 255, 255;
+  --v-theme-on-secondary-palette-key-color: 255, 255, 255;
+  --v-theme-on-tertiary-palette-key-color: 255, 255, 255;
+  --v-theme-on-neutral-palette-key-color: 255, 255, 255;
+  --v-theme-on-neutral-variant-palette-key-color: 255, 255, 255;
+  --v-theme-on-surface-dim: 255, 255, 255;
+  --v-theme-on-surface-bright: 255, 255, 255;
+  --v-theme-on-surface-container-lowest: 255, 255, 255;
+  --v-theme-on-surface-container-low: 255, 255, 255;
+  --v-theme-on-surface-container: 255, 255, 255;
+  --v-theme-on-surface-container-high: 255, 255, 255;
+  --v-theme-on-surface-container-highest: 255, 255, 255;
+  --v-theme-on-inverse-surface: 0, 0, 0;
+  --v-theme-on-inverse-on-surface: 255, 255, 255;
+  --v-theme-on-outline: 255, 255, 255;
+  --v-theme-on-outline-variant: 255, 255, 255;
+  --v-theme-on-shadow: 255, 255, 255;
+  --v-theme-on-scrim: 255, 255, 255;
+  --v-theme-on-surface-tint: 0, 0, 0;
+  --v-theme-on-inverse-primary: 255, 255, 255;
+  --v-theme-on-primary-fixed-dim: 0, 0, 0;
+  --v-theme-on-secondary-fixed-dim: 0, 0, 0;
+  --v-theme-on-tertiary-fixed-dim: 0, 0, 0;
+  --v-border-color: 255, 255, 255;
+  --v-border-opacity: 0.12;
+  --v-high-emphasis-opacity: 1;
+  --v-medium-emphasis-opacity: 0.7;
+  --v-disabled-opacity: 0.5;
+  --v-idle-opacity: 0.1;
+  --v-hover-opacity: 0.04;
+  --v-focus-opacity: 0.12;
+  --v-selected-opacity: 0.08;
+  --v-activated-opacity: 0.12;
+  --v-pressed-opacity: 0.16;
+  --v-dragged-opacity: 0.08;
+  --v-theme-kbd: 33, 37, 41;
+  --v-theme-on-kbd: 255, 255, 255;
+  --v-theme-code: 52, 52, 52;
+  --v-theme-on-code: 204, 204, 204;
+}
+
+.bg-primary-palette-key-color {
+  --v-theme-overlay-multiplier: var(--v-theme-primary-palette-key-color-overlay-multiplier);
+  background-color: rgb(var(--v-theme-primary-palette-key-color)) !important;
+  color: rgb(var(--v-theme-on-primary-palette-key-color)) !important;
+}
+
+.bg-secondary-palette-key-color {
+  --v-theme-overlay-multiplier: var(--v-theme-secondary-palette-key-color-overlay-multiplier);
+  background-color: rgb(var(--v-theme-secondary-palette-key-color)) !important;
+  color: rgb(var(--v-theme-on-secondary-palette-key-color)) !important;
+}
+
+.bg-tertiary-palette-key-color {
+  --v-theme-overlay-multiplier: var(--v-theme-tertiary-palette-key-color-overlay-multiplier);
+  background-color: rgb(var(--v-theme-tertiary-palette-key-color)) !important;
+  color: rgb(var(--v-theme-on-tertiary-palette-key-color)) !important;
+}
+
+.bg-neutral-palette-key-color {
+  --v-theme-overlay-multiplier: var(--v-theme-neutral-palette-key-color-overlay-multiplier);
+  background-color: rgb(var(--v-theme-neutral-palette-key-color)) !important;
+  color: rgb(var(--v-theme-on-neutral-palette-key-color)) !important;
+}
+
+.bg-neutral-variant-palette-key-color {
+  --v-theme-overlay-multiplier: var(--v-theme-neutral-variant-palette-key-color-overlay-multiplier);
+  background-color: rgb(var(--v-theme-neutral-variant-palette-key-color)) !important;
+  color: rgb(var(--v-theme-on-neutral-variant-palette-key-color)) !important;
+}
+
+.bg-background {
+  --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+  background-color: rgb(var(--v-theme-background)) !important;
+  color: rgb(var(--v-theme-on-background)) !important;
+}
+
+.bg-surface {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface)) !important;
+  color: rgb(var(--v-theme-on-surface)) !important;
+}
+
+.bg-surface-dim {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-dim-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-dim)) !important;
+  color: rgb(var(--v-theme-on-surface-dim)) !important;
+}
+
+.bg-surface-bright {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-bright)) !important;
+  color: rgb(var(--v-theme-on-surface-bright)) !important;
+}
+
+.bg-surface-container-lowest {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-container-lowest-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-container-lowest)) !important;
+  color: rgb(var(--v-theme-on-surface-container-lowest)) !important;
+}
+
+.bg-surface-container-low {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-container-low-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-container-low)) !important;
+  color: rgb(var(--v-theme-on-surface-container-low)) !important;
+}
+
+.bg-surface-container {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-container-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-container)) !important;
+  color: rgb(var(--v-theme-on-surface-container)) !important;
+}
+
+.bg-surface-container-high {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-container-high-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-container-high)) !important;
+  color: rgb(var(--v-theme-on-surface-container-high)) !important;
+}
+
+.bg-surface-container-highest {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-container-highest-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-container-highest)) !important;
+  color: rgb(var(--v-theme-on-surface-container-highest)) !important;
+}
+
+.bg-surface-variant {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-variant)) !important;
+  color: rgb(var(--v-theme-on-surface-variant)) !important;
+}
+
+.bg-inverse-surface {
+  --v-theme-overlay-multiplier: var(--v-theme-inverse-surface-overlay-multiplier);
+  background-color: rgb(var(--v-theme-inverse-surface)) !important;
+  color: rgb(var(--v-theme-on-inverse-surface)) !important;
+}
+
+.bg-inverse-on-surface {
+  --v-theme-overlay-multiplier: var(--v-theme-inverse-on-surface-overlay-multiplier);
+  background-color: rgb(var(--v-theme-inverse-on-surface)) !important;
+  color: rgb(var(--v-theme-on-inverse-on-surface)) !important;
+}
+
+.bg-outline {
+  --v-theme-overlay-multiplier: var(--v-theme-outline-overlay-multiplier);
+  background-color: rgb(var(--v-theme-outline)) !important;
+  color: rgb(var(--v-theme-on-outline)) !important;
+}
+
+.bg-outline-variant {
+  --v-theme-overlay-multiplier: var(--v-theme-outline-variant-overlay-multiplier);
+  background-color: rgb(var(--v-theme-outline-variant)) !important;
+  color: rgb(var(--v-theme-on-outline-variant)) !important;
+}
+
+.bg-shadow {
+  --v-theme-overlay-multiplier: var(--v-theme-shadow-overlay-multiplier);
+  background-color: rgb(var(--v-theme-shadow)) !important;
+  color: rgb(var(--v-theme-on-shadow)) !important;
+}
+
+.bg-scrim {
+  --v-theme-overlay-multiplier: var(--v-theme-scrim-overlay-multiplier);
+  background-color: rgb(var(--v-theme-scrim)) !important;
+  color: rgb(var(--v-theme-on-scrim)) !important;
+}
+
+.bg-surface-tint {
+  --v-theme-overlay-multiplier: var(--v-theme-surface-tint-overlay-multiplier);
+  background-color: rgb(var(--v-theme-surface-tint)) !important;
+  color: rgb(var(--v-theme-on-surface-tint)) !important;
+}
+
+.bg-primary {
+  --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+  background-color: rgb(var(--v-theme-primary)) !important;
+  color: rgb(var(--v-theme-on-primary)) !important;
+}
+
+.bg-primary-container {
+  --v-theme-overlay-multiplier: var(--v-theme-primary-container-overlay-multiplier);
+  background-color: rgb(var(--v-theme-primary-container)) !important;
+  color: rgb(var(--v-theme-on-primary-container)) !important;
+}
+
+.bg-inverse-primary {
+  --v-theme-overlay-multiplier: var(--v-theme-inverse-primary-overlay-multiplier);
+  background-color: rgb(var(--v-theme-inverse-primary)) !important;
+  color: rgb(var(--v-theme-on-inverse-primary)) !important;
+}
+
+.bg-secondary {
+  --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+  background-color: rgb(var(--v-theme-secondary)) !important;
+  color: rgb(var(--v-theme-on-secondary)) !important;
+}
+
+.bg-secondary-container {
+  --v-theme-overlay-multiplier: var(--v-theme-secondary-container-overlay-multiplier);
+  background-color: rgb(var(--v-theme-secondary-container)) !important;
+  color: rgb(var(--v-theme-on-secondary-container)) !important;
+}
+
+.bg-tertiary {
+  --v-theme-overlay-multiplier: var(--v-theme-tertiary-overlay-multiplier);
+  background-color: rgb(var(--v-theme-tertiary)) !important;
+  color: rgb(var(--v-theme-on-tertiary)) !important;
+}
+
+.bg-tertiary-container {
+  --v-theme-overlay-multiplier: var(--v-theme-tertiary-container-overlay-multiplier);
+  background-color: rgb(var(--v-theme-tertiary-container)) !important;
+  color: rgb(var(--v-theme-on-tertiary-container)) !important;
+}
+
+.bg-error {
+  --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+  background-color: rgb(var(--v-theme-error)) !important;
+  color: rgb(var(--v-theme-on-error)) !important;
+}
+
+.bg-error-container {
+  --v-theme-overlay-multiplier: var(--v-theme-error-container-overlay-multiplier);
+  background-color: rgb(var(--v-theme-error-container)) !important;
+  color: rgb(var(--v-theme-on-error-container)) !important;
+}
+
+.bg-primary-fixed {
+  --v-theme-overlay-multiplier: var(--v-theme-primary-fixed-overlay-multiplier);
+  background-color: rgb(var(--v-theme-primary-fixed)) !important;
+  color: rgb(var(--v-theme-on-primary-fixed)) !important;
+}
+
+.bg-primary-fixed-dim {
+  --v-theme-overlay-multiplier: var(--v-theme-primary-fixed-dim-overlay-multiplier);
+  background-color: rgb(var(--v-theme-primary-fixed-dim)) !important;
+  color: rgb(var(--v-theme-on-primary-fixed-dim)) !important;
+}
+
+.bg-secondary-fixed {
+  --v-theme-overlay-multiplier: var(--v-theme-secondary-fixed-overlay-multiplier);
+  background-color: rgb(var(--v-theme-secondary-fixed)) !important;
+  color: rgb(var(--v-theme-on-secondary-fixed)) !important;
+}
+
+.bg-secondary-fixed-dim {
+  --v-theme-overlay-multiplier: var(--v-theme-secondary-fixed-dim-overlay-multiplier);
+  background-color: rgb(var(--v-theme-secondary-fixed-dim)) !important;
+  color: rgb(var(--v-theme-on-secondary-fixed-dim)) !important;
+}
+
+.bg-tertiary-fixed {
+  --v-theme-overlay-multiplier: var(--v-theme-tertiary-fixed-overlay-multiplier);
+  background-color: rgb(var(--v-theme-tertiary-fixed)) !important;
+  color: rgb(var(--v-theme-on-tertiary-fixed)) !important;
+}
+
+.bg-tertiary-fixed-dim {
+  --v-theme-overlay-multiplier: var(--v-theme-tertiary-fixed-dim-overlay-multiplier);
+  background-color: rgb(var(--v-theme-tertiary-fixed-dim)) !important;
+  color: rgb(var(--v-theme-on-tertiary-fixed-dim)) !important;
+}
+
+.text-primary-palette-key-color {
+  color: rgb(var(--v-theme-primary-palette-key-color)) !important;
+}
+
+.border-primary-palette-key-color {
+  --v-border-color: var(--v-theme-primary-palette-key-color);
+}
+
+.text-secondary-palette-key-color {
+  color: rgb(var(--v-theme-secondary-palette-key-color)) !important;
+}
+
+.border-secondary-palette-key-color {
+  --v-border-color: var(--v-theme-secondary-palette-key-color);
+}
+
+.text-tertiary-palette-key-color {
+  color: rgb(var(--v-theme-tertiary-palette-key-color)) !important;
+}
+
+.border-tertiary-palette-key-color {
+  --v-border-color: var(--v-theme-tertiary-palette-key-color);
+}
+
+.text-neutral-palette-key-color {
+  color: rgb(var(--v-theme-neutral-palette-key-color)) !important;
+}
+
+.border-neutral-palette-key-color {
+  --v-border-color: var(--v-theme-neutral-palette-key-color);
+}
+
+.text-neutral-variant-palette-key-color {
+  color: rgb(var(--v-theme-neutral-variant-palette-key-color)) !important;
+}
+
+.border-neutral-variant-palette-key-color {
+  --v-border-color: var(--v-theme-neutral-variant-palette-key-color);
+}
+
+.text-background {
+  color: rgb(var(--v-theme-background)) !important;
+}
+
+.border-background {
+  --v-border-color: var(--v-theme-background);
+}
+
+.on-background {
+  color: rgb(var(--v-theme-on-background)) !important;
+}
+
+.text-surface {
+  color: rgb(var(--v-theme-surface)) !important;
+}
+
+.border-surface {
+  --v-border-color: var(--v-theme-surface);
+}
+
+.text-surface-dim {
+  color: rgb(var(--v-theme-surface-dim)) !important;
+}
+
+.border-surface-dim {
+  --v-border-color: var(--v-theme-surface-dim);
+}
+
+.text-surface-bright {
+  color: rgb(var(--v-theme-surface-bright)) !important;
+}
+
+.border-surface-bright {
+  --v-border-color: var(--v-theme-surface-bright);
+}
+
+.text-surface-container-lowest {
+  color: rgb(var(--v-theme-surface-container-lowest)) !important;
+}
+
+.border-surface-container-lowest {
+  --v-border-color: var(--v-theme-surface-container-lowest);
+}
+
+.text-surface-container-low {
+  color: rgb(var(--v-theme-surface-container-low)) !important;
+}
+
+.border-surface-container-low {
+  --v-border-color: var(--v-theme-surface-container-low);
+}
+
+.text-surface-container {
+  color: rgb(var(--v-theme-surface-container)) !important;
+}
+
+.border-surface-container {
+  --v-border-color: var(--v-theme-surface-container);
+}
+
+.text-surface-container-high {
+  color: rgb(var(--v-theme-surface-container-high)) !important;
+}
+
+.border-surface-container-high {
+  --v-border-color: var(--v-theme-surface-container-high);
+}
+
+.text-surface-container-highest {
+  color: rgb(var(--v-theme-surface-container-highest)) !important;
+}
+
+.border-surface-container-highest {
+  --v-border-color: var(--v-theme-surface-container-highest);
+}
+
+.on-surface {
+  color: rgb(var(--v-theme-on-surface)) !important;
+}
+
+.text-surface-variant {
+  color: rgb(var(--v-theme-surface-variant)) !important;
+}
+
+.border-surface-variant {
+  --v-border-color: var(--v-theme-surface-variant);
+}
+
+.on-surface-variant {
+  color: rgb(var(--v-theme-on-surface-variant)) !important;
+}
+
+.text-inverse-surface {
+  color: rgb(var(--v-theme-inverse-surface)) !important;
+}
+
+.border-inverse-surface {
+  --v-border-color: var(--v-theme-inverse-surface);
+}
+
+.text-inverse-on-surface {
+  color: rgb(var(--v-theme-inverse-on-surface)) !important;
+}
+
+.border-inverse-on-surface {
+  --v-border-color: var(--v-theme-inverse-on-surface);
+}
+
+.text-outline {
+  color: rgb(var(--v-theme-outline)) !important;
+}
+
+.border-outline {
+  --v-border-color: var(--v-theme-outline);
+}
+
+.text-outline-variant {
+  color: rgb(var(--v-theme-outline-variant)) !important;
+}
+
+.border-outline-variant {
+  --v-border-color: var(--v-theme-outline-variant);
+}
+
+.text-shadow {
+  color: rgb(var(--v-theme-shadow)) !important;
+}
+
+.border-shadow {
+  --v-border-color: var(--v-theme-shadow);
+}
+
+.text-scrim {
+  color: rgb(var(--v-theme-scrim)) !important;
+}
+
+.border-scrim {
+  --v-border-color: var(--v-theme-scrim);
+}
+
+.text-surface-tint {
+  color: rgb(var(--v-theme-surface-tint)) !important;
+}
+
+.border-surface-tint {
+  --v-border-color: var(--v-theme-surface-tint);
+}
+
+.text-primary {
+  color: rgb(var(--v-theme-primary)) !important;
+}
+
+.border-primary {
+  --v-border-color: var(--v-theme-primary);
+}
+
+.on-primary {
+  color: rgb(var(--v-theme-on-primary)) !important;
+}
+
+.text-primary-container {
+  color: rgb(var(--v-theme-primary-container)) !important;
+}
+
+.border-primary-container {
+  --v-border-color: var(--v-theme-primary-container);
+}
+
+.on-primary-container {
+  color: rgb(var(--v-theme-on-primary-container)) !important;
+}
+
+.text-inverse-primary {
+  color: rgb(var(--v-theme-inverse-primary)) !important;
+}
+
+.border-inverse-primary {
+  --v-border-color: var(--v-theme-inverse-primary);
+}
+
+.text-secondary {
+  color: rgb(var(--v-theme-secondary)) !important;
+}
+
+.border-secondary {
+  --v-border-color: var(--v-theme-secondary);
+}
+
+.on-secondary {
+  color: rgb(var(--v-theme-on-secondary)) !important;
+}
+
+.text-secondary-container {
+  color: rgb(var(--v-theme-secondary-container)) !important;
+}
+
+.border-secondary-container {
+  --v-border-color: var(--v-theme-secondary-container);
+}
+
+.on-secondary-container {
+  color: rgb(var(--v-theme-on-secondary-container)) !important;
+}
+
+.text-tertiary {
+  color: rgb(var(--v-theme-tertiary)) !important;
+}
+
+.border-tertiary {
+  --v-border-color: var(--v-theme-tertiary);
+}
+
+.on-tertiary {
+  color: rgb(var(--v-theme-on-tertiary)) !important;
+}
+
+.text-tertiary-container {
+  color: rgb(var(--v-theme-tertiary-container)) !important;
+}
+
+.border-tertiary-container {
+  --v-border-color: var(--v-theme-tertiary-container);
+}
+
+.on-tertiary-container {
+  color: rgb(var(--v-theme-on-tertiary-container)) !important;
+}
+
+.text-error {
+  color: rgb(var(--v-theme-error)) !important;
+}
+
+.border-error {
+  --v-border-color: var(--v-theme-error);
+}
+
+.on-error {
+  color: rgb(var(--v-theme-on-error)) !important;
+}
+
+.text-error-container {
+  color: rgb(var(--v-theme-error-container)) !important;
+}
+
+.border-error-container {
+  --v-border-color: var(--v-theme-error-container);
+}
+
+.on-error-container {
+  color: rgb(var(--v-theme-on-error-container)) !important;
+}
+
+.text-primary-fixed {
+  color: rgb(var(--v-theme-primary-fixed)) !important;
+}
+
+.border-primary-fixed {
+  --v-border-color: var(--v-theme-primary-fixed);
+}
+
+.text-primary-fixed-dim {
+  color: rgb(var(--v-theme-primary-fixed-dim)) !important;
+}
+
+.border-primary-fixed-dim {
+  --v-border-color: var(--v-theme-primary-fixed-dim);
+}
+
+.on-primary-fixed {
+  color: rgb(var(--v-theme-on-primary-fixed)) !important;
+}
+
+.on-primary-fixed-variant {
+  color: rgb(var(--v-theme-on-primary-fixed-variant)) !important;
+}
+
+.text-secondary-fixed {
+  color: rgb(var(--v-theme-secondary-fixed)) !important;
+}
+
+.border-secondary-fixed {
+  --v-border-color: var(--v-theme-secondary-fixed);
+}
+
+.text-secondary-fixed-dim {
+  color: rgb(var(--v-theme-secondary-fixed-dim)) !important;
+}
+
+.border-secondary-fixed-dim {
+  --v-border-color: var(--v-theme-secondary-fixed-dim);
+}
+
+.on-secondary-fixed {
+  color: rgb(var(--v-theme-on-secondary-fixed)) !important;
+}
+
+.on-secondary-fixed-variant {
+  color: rgb(var(--v-theme-on-secondary-fixed-variant)) !important;
+}
+
+.text-tertiary-fixed {
+  color: rgb(var(--v-theme-tertiary-fixed)) !important;
+}
+
+.border-tertiary-fixed {
+  --v-border-color: var(--v-theme-tertiary-fixed);
+}
+
+.text-tertiary-fixed-dim {
+  color: rgb(var(--v-theme-tertiary-fixed-dim)) !important;
+}
+
+.border-tertiary-fixed-dim {
+  --v-border-color: var(--v-theme-tertiary-fixed-dim);
+}
+
+.on-tertiary-fixed {
+  color: rgb(var(--v-theme-on-tertiary-fixed)) !important;
+}
+
+.on-tertiary-fixed-variant {
+  color: rgb(var(--v-theme-on-tertiary-fixed-variant)) !important;
+}
+
+.on-primary-palette-key-color {
+  color: rgb(var(--v-theme-on-primary-palette-key-color)) !important;
+}
+
+.on-secondary-palette-key-color {
+  color: rgb(var(--v-theme-on-secondary-palette-key-color)) !important;
+}
+
+.on-tertiary-palette-key-color {
+  color: rgb(var(--v-theme-on-tertiary-palette-key-color)) !important;
+}
+
+.on-neutral-palette-key-color {
+  color: rgb(var(--v-theme-on-neutral-palette-key-color)) !important;
+}
+
+.on-neutral-variant-palette-key-color {
+  color: rgb(var(--v-theme-on-neutral-variant-palette-key-color)) !important;
+}
+
+.on-surface-dim {
+  color: rgb(var(--v-theme-on-surface-dim)) !important;
+}
+
+.on-surface-bright {
+  color: rgb(var(--v-theme-on-surface-bright)) !important;
+}
+
+.on-surface-container-lowest {
+  color: rgb(var(--v-theme-on-surface-container-lowest)) !important;
+}
+
+.on-surface-container-low {
+  color: rgb(var(--v-theme-on-surface-container-low)) !important;
+}
+
+.on-surface-container {
+  color: rgb(var(--v-theme-on-surface-container)) !important;
+}
+
+.on-surface-container-high {
+  color: rgb(var(--v-theme-on-surface-container-high)) !important;
+}
+
+.on-surface-container-highest {
+  color: rgb(var(--v-theme-on-surface-container-highest)) !important;
+}
+
+.on-inverse-surface {
+  color: rgb(var(--v-theme-on-inverse-surface)) !important;
+}
+
+.on-inverse-on-surface {
+  color: rgb(var(--v-theme-on-inverse-on-surface)) !important;
+}
+
+.on-outline {
+  color: rgb(var(--v-theme-on-outline)) !important;
+}
+
+.on-outline-variant {
+  color: rgb(var(--v-theme-on-outline-variant)) !important;
+}
+
+.on-shadow {
+  color: rgb(var(--v-theme-on-shadow)) !important;
+}
+
+.on-scrim {
+  color: rgb(var(--v-theme-on-scrim)) !important;
+}
+
+.on-surface-tint {
+  color: rgb(var(--v-theme-on-surface-tint)) !important;
+}
+
+.on-inverse-primary {
+  color: rgb(var(--v-theme-on-inverse-primary)) !important;
+}
+
+.on-primary-fixed-dim {
+  color: rgb(var(--v-theme-on-primary-fixed-dim)) !important;
+}
+
+.on-secondary-fixed-dim {
+  color: rgb(var(--v-theme-on-secondary-fixed-dim)) !important;
+}
+
+.on-tertiary-fixed-dim {
+  color: rgb(var(--v-theme-on-tertiary-fixed-dim)) !important;
+}

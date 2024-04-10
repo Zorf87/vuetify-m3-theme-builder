@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="text-h4">Color scheme</div>
+    <div class="text-h4">Color scheme background-color / color</div>
     <Section>
       <template v-slot:title>Light</template>
       <template v-slot:content>
@@ -9,127 +9,196 @@
             <div class="d-flex w-100">
               <v-sheet
                 :height="100"
-                class="w-25 pt-4 pl-4 rounded-ts-xl"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0 rounded-ts-xl"
                 color="primary"
                 >Primary</v-sheet
               >
-              <v-sheet :height="100" class="w-25 pt-4 pl-4" color="on-primary"
-                >On Primary</v-sheet
-              >
               <v-sheet
                 :height="100"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="primary-container"
                 >Primary Container</v-sheet
               >
               <v-sheet
                 :height="100"
-                class="w-25 pt-4 pl-4 rounded-te-xl"
-                color="on-primary-container"
-                >On Primary Container</v-sheet
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-primary"
               >
-            </div>
-            <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="secondary"
-                >Secondary</v-sheet
-              >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="on-secondary"
-                >On Secondary</v-sheet
+                Inverse Primary</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
+                :height="100"
+                class="pt-4 pl-4 rounded-te-xl flex-grow-1 flex-shrink-0"
+                color="primary-fixed"
+              >
+                Primary Fixed
+              </v-sheet>
+            </div>
+            <div class="d-flex w-100">
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="secondary"
+                >Secondary</v-sheet
+              >
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="secondary-container"
                 >Secondary Container</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-secondary-container"
-                >On Secondary Container</v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-secondary"
               >
-            </div>
-            <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="tertiary"
-                >Tertiary</v-sheet
-              >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="on-tertiary"
-                >On Tertiary</v-sheet
+                Inverse Secondary</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="secondary-fixed"
+              >
+                Secondary Fixed
+              </v-sheet>
+            </div>
+            <div class="d-flex w-100">
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="tertiary"
+                >Tertiary</v-sheet
+              >
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="tertiary-container"
                 >Tertiary Container</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-tertiary-container"
-                >On Tertiary Container</v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-tertiary"
               >
+                Inverse Tertiary</v-sheet
+              >
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="tertiary-fixed"
+              >
+                Tertiary Fixed
+              </v-sheet>
             </div>
             <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="error"
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="error"
                 >Error</v-sheet
-              >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="on-error"
-                >On Error</v-sheet
               >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="error-container"
                 >Error Container</v-sheet
               >
-              <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-error-container"
-                >On Error Container</v-sheet
-              >
             </div>
             <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="surface"
-                >Surface</v-sheet
-              >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface"
+                >Surface</v-sheet
+              >
+
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="surface-bright"
                 >Surface Bright</v-sheet
               >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="surface-light"
-                >Surface Light</v-sheet
-              >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="surface-variant"
                 >Surface Variant</v-sheet
               >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-surface-variant"
-                >On Surface Variant</v-sheet
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-tint"
+                >Surface Tint</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-surface"
+                >Inverse Surface</v-sheet
               >
             </div>
             <div class="d-flex w-100">
               <v-sheet
                 :height="75"
-                class="w-50 pt-4 pl-4 rounded-bs-xl"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-lowest"
+                >Surface Container Lowest</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-low"
+                >Surface Container Low</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container"
+                >Surface Container</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-high"
+                >Surface Container High</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-highest"
+                >Surface Container Highest</v-sheet
+              >
+            </div>
+            <div class="d-flex w-100">
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0 rounded-bs-xl"
                 color="outline"
                 >Outline</v-sheet
               >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="background"
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="outline-variant"
+                >Outline</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="scrim"
+                >Scrim</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="background"
                 >Background</v-sheet
               >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4 rounded-be-xl"
-                color="on-background"
-                >On Background</v-sheet
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0 rounded-be-xl"
+                color="shadow"
+                >Shadow</v-sheet
               >
             </div>
           </div>
@@ -144,127 +213,196 @@
             <div class="d-flex w-100">
               <v-sheet
                 :height="100"
-                class="w-25 pt-4 pl-4 rounded-ts-xl"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0 rounded-ts-xl"
                 color="primary"
                 >Primary</v-sheet
               >
-              <v-sheet :height="100" class="w-25 pt-4 pl-4" color="on-primary"
-                >On Primary</v-sheet
-              >
               <v-sheet
                 :height="100"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="primary-container"
                 >Primary Container</v-sheet
               >
               <v-sheet
                 :height="100"
-                class="w-25 pt-4 pl-4 rounded-te-xl"
-                color="on-primary-container"
-                >On Primary Container</v-sheet
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-primary"
               >
-            </div>
-            <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="secondary"
-                >Secondary</v-sheet
-              >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="on-secondary"
-                >On Secondary</v-sheet
+                Inverse Primary</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
+                :height="100"
+                class="pt-4 pl-4 rounded-te-xl flex-grow-1 flex-shrink-0"
+                color="primary-fixed"
+              >
+                Primary Fixed
+              </v-sheet>
+            </div>
+            <div class="d-flex w-100">
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="secondary"
+                >Secondary</v-sheet
+              >
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="secondary-container"
                 >Secondary Container</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-secondary-container"
-                >On Secondary Container</v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-secondary"
               >
-            </div>
-            <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="tertiary"
-                >Tertiary</v-sheet
-              >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="on-tertiary"
-                >On Tertiary</v-sheet
+                Inverse Secondary</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="secondary-fixed"
+              >
+                Secondary Fixed
+              </v-sheet>
+            </div>
+            <div class="d-flex w-100">
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="tertiary"
+                >Tertiary</v-sheet
+              >
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="tertiary-container"
                 >Tertiary Container</v-sheet
               >
               <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-tertiary-container"
-                >On Tertiary Container</v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-tertiary"
               >
+                Inverse Tertiary</v-sheet
+              >
+              <v-sheet
+                :height="100"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="tertiary-fixed"
+              >
+                Tertiary Fixed
+              </v-sheet>
             </div>
             <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="error"
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="error"
                 >Error</v-sheet
-              >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="on-error"
-                >On Error</v-sheet
               >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="error-container"
                 >Error Container</v-sheet
               >
-              <v-sheet
-                :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-error-container"
-                >On Error Container</v-sheet
-              >
             </div>
             <div class="d-flex w-100">
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="surface"
-                >Surface</v-sheet
-              >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface"
+                >Surface</v-sheet
+              >
+
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="surface-bright"
                 >Surface Bright</v-sheet
               >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="surface-light"
-                >Surface Light</v-sheet
-              >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
                 color="surface-variant"
                 >Surface Variant</v-sheet
               >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4"
-                color="on-surface-variant"
-                >On Surface Variant</v-sheet
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-tint"
+                >Surface Tint</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="inverse-surface"
+                >Inverse Surface</v-sheet
               >
             </div>
             <div class="d-flex w-100">
               <v-sheet
                 :height="75"
-                class="w-50 pt-4 pl-4 rounded-bs-xl"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-lowest"
+                >Surface Container Lowest</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-low"
+                >Surface Container Low</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container"
+                >Surface Container</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-high"
+                >Surface Container High</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="surface-container-highest"
+                >Surface Container Highest</v-sheet
+              >
+            </div>
+            <div class="d-flex w-100">
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0 rounded-bs-xl"
                 color="outline"
                 >Outline</v-sheet
               >
-              <v-sheet :height="75" class="w-25 pt-4 pl-4" color="background"
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="outline-variant"
+                >Outline</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="scrim"
+                >Scrim</v-sheet
+              >
+              <v-sheet
+                :height="75"
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0"
+                color="background"
                 >Background</v-sheet
               >
               <v-sheet
                 :height="75"
-                class="w-25 pt-4 pl-4 rounded-be-xl"
-                color="on-background"
-                >On Background</v-sheet
+                class="pt-4 pl-4 flex-grow-1 flex-shrink-0 rounded-be-xl"
+                color="shadow"
+                >Shadow</v-sheet
               >
             </div>
           </div>
