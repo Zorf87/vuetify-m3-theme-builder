@@ -1,43 +1,54 @@
+<script setup>
+import { ref } from "vue";
+
+const color = ref("default");
+const density = ref("default");
+const size = ref("default");
+
+const variants = ref([
+  "text",
+  "flat",
+  "elevated",
+  "outlined",
+  "tonal",
+  "plain",
+]);
+</script>
 <template>
   <v-container>
     <div class="text-h4">Buttons</div>
+    <v-radio-group inline v-model="color">
+      <v-radio label="default" value="default"></v-radio>
+      <v-radio label="primary" value="primary"></v-radio>
+      <v-radio label="secondary" value="secondary"></v-radio>
+      <v-radio label="tertiary" value="tertiary"></v-radio>
+    </v-radio-group>
+    <v-radio-group inline v-model="density">
+      <v-radio label="compact" value="compact"></v-radio>
+      <v-radio label="comfortable" value="comfortable"></v-radio>
+      <v-radio label="default" value="default"></v-radio>
+    </v-radio-group>
+    <v-radio-group inline v-model="size">
+      <v-radio label="x-small" value="x-small"></v-radio>
+      <v-radio label="small" value="small"></v-radio>
+      <v-radio label="default" value="default"></v-radio>
+      <v-radio label="large" value="large"></v-radio>
+      <v-radio label="x-large" value="x-large"></v-radio>
+    </v-radio-group>
     <Section>
-      <template v-slot:title>Primary</template>
       <template v-slot:content>
-        <v-btn variant="flat">Button</v-btn>
-        <v-btn variant="outlined">Button</v-btn>
-        <v-btn prepend-icon="mdi-plus">Button</v-btn>
-        <v-btn variant="text"> Button</v-btn>
-        <v-btn variant="tonal" prepend-icon="mdi-plus">Button</v-btn>
-      </template>
-    </Section>
-    <Section>
-      <template v-slot:title>Secondary</template>
-      <template v-slot:content>
-        <v-btn color="secondary" variant="flat">Button</v-btn>
-        <v-btn color="secondary" variant="outlined">Button</v-btn>
-        <v-btn color="secondary" prepend-icon="mdi-plus">Button</v-btn>
-        <v-btn color="secondary" variant="text"> Button</v-btn>
-        <v-btn color="secondary" variant="tonal" prepend-icon="mdi-plus"
-          >Button</v-btn
-        >
-      </template>
-    </Section>
-    <Section>
-      <template v-slot:title>Tertiary</template>
-      <template v-slot:content>
-        <v-btn color="tertiary" variant="flat">Button</v-btn>
-        <v-btn color="tertiary" variant="outlined">Button</v-btn>
-        <v-btn color="tertiary" prepend-icon="mdi-plus">Button</v-btn>
-        <v-btn color="tertiary" variant="text"> Button</v-btn>
-        <v-btn color="tertiary" variant="tonal" prepend-icon="mdi-plus"
-          >Button</v-btn
-        >
+        <template v-for="variant in variants" :key="variant">
+          <v-btn
+            :color="color"
+            :variant="variant"
+            :density="density"
+            :size="size"
+            class="text-capitalize"
+            >{{ variant }}</v-btn
+          >
+        </template>
       </template>
     </Section>
   </v-container>
 </template>
-
-<script setup></script>
-
 <style lang="scss" scoped></style>

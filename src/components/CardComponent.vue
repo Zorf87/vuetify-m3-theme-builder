@@ -1,47 +1,46 @@
 <script setup>
 import { ref } from "vue";
 
-const cards = ref([
-  {
-    title: "Default",
-    variant: ["text", "flat", "elevated", "outlined", "tonal", "plain"],
-    color: null,
-  },
-  {
-    title: "Primary",
-    variant: ["text", "flat", "elevated", "outlined", "tonal", "plain"],
-    color: "primary",
-  },
-  {
-    title: "Secondary",
-    variant: ["text", "flat", "elevated", "outlined", "tonal", "plain"],
-    color: "secondary",
-  },
-  {
-    title: "Tertiary",
-    variant: ["text", "flat", "elevated", "outlined", "tonal", "plain"],
-    color: "tertiary",
-  },
+const color = ref("default");
+
+const variants = ref([
+  "text",
+  "flat",
+  "elevated",
+  "outlined",
+  "tonal",
+  "plain",
 ]);
 </script>
 <template>
   <v-container>
     <div class="text-h4">Cards</div>
-    <template v-for="(card, i) in cards" :key="i">
-      <Section>
-        <template v-slot:title>{{ card.title }}</template>
-        <template v-slot:content>
-          <v-card
-            v-for="(v, z) in card.variant"
-            :key="z"
-            :variant="v"
-            text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, ratione debitis quis est labore voluptatibus! Eaque cupiditate minima, at placeat totam, magni doloremque veniam neque porro libero rerum unde voluptatem!"
-            :color="card.color !== null ? card.color : ''"
-          >
-          </v-card>
-        </template>
-      </Section>
-    </template>
+    <v-radio-group inline v-model="color">
+      <v-radio label="default" value="default"></v-radio>
+      <v-radio label="primary" value="primary"></v-radio>
+      <v-radio label="secondary" value="secondary"></v-radio>
+      <v-radio label="tertiary" value="tertiary"></v-radio>
+    </v-radio-group>
+    <Section>
+      <template v-slot:content>
+        <v-card v-for="(v, z) in variants" :key="z" :variant="v" :color="color">
+          <v-card-title class="text-capitalize">{{ v }}</v-card-title>
+          <v-card-subtitle>Subtitle</v-card-subtitle>
+          <v-card-text>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
+              ratione debitis quis est labore voluptatibus! Eaque cupiditate
+              minima, at placeat totam, magni doloremque veniam neque porro
+              libero rerum unde voluptatem!
+            </p>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn :variant="v" :color="color">Action</v-btn>
+          </v-card-actions>
+        </v-card>
+      </template>
+    </Section>
   </v-container>
 </template>
 <style lang="scss" scoped></style>
