@@ -17,8 +17,7 @@
     "vite-plugin-pages": "^0.32.1",
     "vue": "^3.4.0",
     "vue-router": "^4.3.0",
-    "vuetify": "^3.5.0",
-    "vuetify-m3-theme-builder": "file:"
+    "vuetify": "^3.5.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
