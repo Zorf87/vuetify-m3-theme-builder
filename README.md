@@ -1,7 +1,7 @@
-# Vuetify Material Design 3 Theme Builder
+# Material Theme Builder for Vuetify
 
-Questo tool è una copia del progetto ufficiale [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/) fatto in Vue + Vuetify.
-Ti consente di visualizare i vari componenti di vietify selezioando un colore primarioesportare la configurazione del tu tema custom cosi da poterla copiare facilmente su altri progetti.
+This tool is a version built with Vue and Vuetify of the official [Material Theme Builder](https://material-foundation.github.io/material-theme-builder/) project.
+It allows you to preview various Vuetify components by selecting a primary color and easily export your custom theme configuration, ready to be used in other projects.
 
 ## ❗️ Important Links
 
@@ -23,9 +23,9 @@ After completing the installation, your environment is ready for Vuetify develop
 
 ## ✨ Features
 
-- 🖼️ **Showcase dei componenti Vuetify**: Selezionando il colore primario verrà generato dinamicamente il tema e sarà possibile visualizzare l'aspetto dei vari componenti nelle loro varianti.
+- 🖼️ **Vuetify Components Showcase**: Selecting the primary color will dynamically generate the theme, allowing you to preview the appearance of various components in their different variants.
 
-- 🧩 **Export custom theme**: Consente di esportare il tema nel formato compatibile con il framework Vuetify.
+- 🧩 **Export Custom Theme**: Enables you to export the theme in a format compatible with the Vuetify framework.
 
 ## 💡 Usage
 
@@ -43,7 +43,7 @@ yarn dev
 
 ## 💪 Support Vuetify MD3 Theme Builder Development
 
-This project is built with [Vuetify](https://vuetifyjs.com/en/), a UI Library with a comprehensive collection of Vue components. Vuetify is an MIT licensed Open Source project that has been made possible due to the generous contributions by our [sponsors and backers](https://vuetifyjs.com/introduction/sponsors-and-backers/). If you are interested in supporting this project, please consider:
+You can use GitHub Issues to give or receive feedback.
 
 ## 📑 License
 
