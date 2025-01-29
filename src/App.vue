@@ -17,8 +17,6 @@ const { lightTheme, darkTheme } = storeToRefs(store);
 onBeforeMount(() => {
   theme.themes.value.light.colors = lightTheme.value.colors;
   theme.themes.value.dark.colors = darkTheme.value.colors;
-
-  console.log(theme.themes.value.light.colors);
 });
 
 watchEffect(() => {

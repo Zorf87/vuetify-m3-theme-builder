@@ -1,25 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { useTheme } from "vuetify";
-import { useAppStore } from "@/stores/app";
 
-const theme = useTheme();
+import { useAppStore } from "@/stores/app";
+import { storeToRefs } from "pinia";
+
 const store = useAppStore();
 
-const buttons = ref([
-  {
-    key: "primary",
-    title: "Primary",
-  },
-  // {
-  //   key: "secondary",
-  //   title: "Secondary",
-  // },
-  // {
-  //   key: "tertiary",
-  //   title: "Tertiary",
-  // },
-]);
+const { palette, contrast } = storeToRefs(store);
 
 const pages = ref([
   { route: "/", title: "Home" },
@@ -31,24 +18,36 @@ const pages = ref([
 const colorPicker = ref("#ff00ff");
 const showColorPickerDialog = ref(false);
 const colorSelected = ref();
+const contrastSelected = ref({
+  value: 0.0,
+  title: "Default contrast",
+});
 
 function handleClickBtnColor(b) {
   colorSelected.value = b;
-
-  colorPicker.value = theme.themes.value.light.colors[b.key];
+  colorPicker.value = b.color;
   showColorPickerDialog.value = true;
 }
 
 function applySelection() {
-  if (colorSelected.value.key == "primary") {
-    // Genero l'interno schema
-    store.setThemesByColor(colorPicker.value);
-    // theme.themes.value.light.colors = global.lightTheme.colors;
-    // theme.themes.value.dark.colors = global.darkTheme.colors;
-    // theme.themes.value.dark.colors = darkTheme.colors;
-    // theme.themes.value.light.colors = lightTheme.colors;
-  } else {
-    // Genero solo la paletta secondary / tertiary
+  for (let b of palette.value) {
+    if (b.key === colorSelected.value.key) {
+      b.color = colorPicker.value;
+    }
+  }
+
+  store.setThemesByColor(
+    colorSelected.value.key,
+    colorPicker.value,
+    contrastSelected.value.value
+  );
+
+  showColorPickerDialog.value = false;
+}
+
+function handleContrastSelected() {
+  for (let b of palette.value) {
+    store.setThemesByColor(b.key, b.color, contrastSelected.value.value);
   }
 }
 </script>
@@ -56,19 +55,26 @@ function applySelection() {
   <v-theme-provider theme="light">
     <v-list class="d-flex flex-column pa-4 ga-4">
       <v-list-item
-        v-for="(b, i) in buttons"
+        v-for="(b, i) in palette"
         :key="i"
         class="bg-surface-variant"
         rounded="xl"
       >
         <template v-slot:prepend>
-          <v-btn @click="handleClickBtnColor(b)" :color="b.key" icon>
-            <v-icon :color="b.key">mdi-circle</v-icon>
+          <v-btn @click="handleClickBtnColor(b)" :color="b.color" icon>
+            <v-icon :color="b.color">mdi-circle</v-icon>
           </v-btn>
         </template>
         <v-list-item-title class="pl-4">{{ b.title }}</v-list-item-title>
       </v-list-item>
     </v-list>
+    <v-select
+      class="pa-4"
+      :items="contrast"
+      v-model="contrastSelected"
+      return-object
+      @update:model-value="handleContrastSelected"
+    ></v-select>
   </v-theme-provider>
   <v-list class="pa-4">
     <template v-for="(page, i) in pages" :key="i">
