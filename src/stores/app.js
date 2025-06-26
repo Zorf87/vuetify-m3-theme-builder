@@ -20,11 +20,11 @@ export const useAppStore = defineStore('app', {
         title: "Tertiary",
         color: "#6a404e",
       },
-      /*{
+      {
         key: "error",
         title: "Error",
         color: "#9e000b",
-      }*/
+      }
     ],
     contrast: [
       {

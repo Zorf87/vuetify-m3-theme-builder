@@ -1,29 +1,12 @@
 <script setup lang="ts">
 import { ref } from "vue";
-
+import { useTheme } from "vuetify";
 import { useAppStore } from "@/stores/app";
 import { storeToRefs } from "pinia";
 
+const theme = useTheme();
 const store = useAppStore();
-
-const buttons = ref([
-  {
-    key: "primary",
-    title: "Primary",
-  },
-  {
-    key: "secondary",
-    title: "Secondary",
-  },
-  {
-    key: "tertiary",
-    title: "Tertiary",
-  },
-  {
-    key: "error",
-    title: "Error",
-  }
-]);
+const { palette, contrast } = storeToRefs(store);
 
 const pages = ref([
   { route: "/", title: "Home" },
@@ -42,7 +25,7 @@ const contrastSelected = ref({
 
 function handleClickBtnColor(b) {
   colorSelected.value = b;
-  colorPicker.value = b.color;
+  colorPicker.value = theme.themes.value.light.colors[b.key];
   showColorPickerDialog.value = true;
 }
 
@@ -57,10 +40,16 @@ function applySelection() {
 
   // Force Vuetify to refresh theme CSS variables
   const current = theme.global.name.value;
-  theme.global.name.value = current === 'light' ? 'dark' : 'light';
+  theme.global.name.value = current === "light" ? "dark" : "light";
   theme.global.name.value = current;
 
   showColorPickerDialog.value = false;
+}
+
+function handleContrastSelected() {
+  for (let b of palette.value) {
+    store.setThemesByColor(b.key, b.color, contrastSelected.value.value);
+  }
 }
 </script>
 <template>
