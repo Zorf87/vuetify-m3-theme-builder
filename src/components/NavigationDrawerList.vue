@@ -18,6 +18,10 @@ const buttons = ref([
   {
     key: "tertiary",
     title: "Tertiary",
+  },
+  {
+    key: "error",
+    title: "Error",
   }
 ]);
 
