@@ -11,14 +11,14 @@ const buttons = ref([
     key: "primary",
     title: "Primary",
   },
-  // {
-  //   key: "secondary",
-  //   title: "Secondary",
-  // },
-  // {
-  //   key: "tertiary",
-  //   title: "Tertiary",
-  // },
+  {
+    key: "secondary",
+    title: "Secondary",
+  },
+  {
+    key: "tertiary",
+    title: "Tertiary",
+  }
 ]);
 
 const pages = ref([
@@ -28,7 +28,7 @@ const pages = ref([
   { route: "/cards", title: "Cards" },
 ]);
 
-const colorPicker = ref("#ff00ff");
+const colorPicker = ref("#0099ff");
 const showColorPickerDialog = ref(false);
 const colorSelected = ref();
 
@@ -40,16 +40,20 @@ function handleClickBtnColor(b) {
 }
 
 function applySelection() {
-  if (colorSelected.value.key == "primary") {
-    // Genero l'interno schema
-    store.setThemesByColor(colorPicker.value);
-    // theme.themes.value.light.colors = global.lightTheme.colors;
-    // theme.themes.value.dark.colors = global.darkTheme.colors;
-    // theme.themes.value.dark.colors = darkTheme.colors;
-    // theme.themes.value.light.colors = lightTheme.colors;
-  } else {
-    // Genero solo la paletta secondary / tertiary
+  const key = colorSelected.value.key;
+  const color = colorPicker.value;
+
+  if (key && color) {
+    theme.themes.value.light.colors[key] = color;
+    theme.themes.value.dark.colors[key] = color;
   }
+
+  // Force Vuetify to refresh theme CSS variables
+  const current = theme.global.name.value;
+  theme.global.name.value = current === 'light' ? 'dark' : 'light';
+  theme.global.name.value = current;
+
+  showColorPickerDialog.value = false;
 }
 </script>
 <template>
